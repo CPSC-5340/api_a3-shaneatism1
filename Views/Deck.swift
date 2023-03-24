@@ -18,7 +18,7 @@ struct Deck: View {
                     NavigationLink {
                         CardDetail(card: card)
                     } label: {
-                        Text(card.value + card.suit)
+                        Text(card.value) + Text(" of ") + Text(card.suit)
                     }
                 }
             }

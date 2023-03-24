@@ -14,13 +14,8 @@ struct CardDetail: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                Text(card.value)
+                Text(card.value) + Text(" of ") + Text(card.suit)
                     .font(.system(size: 20))
-                    .padding(.horizontal)
-                        
-                Text(card.suit)
-                    .font(.system(size: 20))
-                    .padding(.horizontal)
                 
                 let url = URL(string: card.image)
                 let data = try? Data(contentsOf: url!)
